@@ -3,7 +3,7 @@
 <head>
 	<title>Partner Site</title> 
 	<style>
-		body {
+		.grid {
 			display: grid;
 			grid-template-columns: 320px 320px 320px 320px;
 			grid-auto-rows: 320px 320px 320px 320px;
@@ -14,7 +14,6 @@
 			margin-right: auto;
 			width: 50%; 
 			width: 160;
-			border: 1px solid #fce1e1;
 		}  
 		p {
 			margin: 10px;
@@ -26,11 +25,15 @@
 			border: 1px solid #101010;
 			background: #ffffff;
 			margin: 10px;
+        	filter: drop-shadow(8px 8px 4px rgb(23, 22, 27));
 		}
 	</style>
 </head> 
 <body LANG=" en-US "  DIR=" LTR ">  
 
+<h1>Burr's Partner Site</h1> 
+
+<div class="grid">  
 	<div class=" border">
 		<p> A prestiguous partner known for it open source </p>
 		<a href="https://redhat.com"> <img src='/images/rh.png'></a>
@@ -71,6 +74,7 @@
 		<p> A prestiguous partner known for it hardware, software and enterprise capabilities.</p>
 		<a href="https://ibm.com">  <img src='/images/ibm.png'> </a>
 	</div>
+</div>
 </body>
 
 </html>
