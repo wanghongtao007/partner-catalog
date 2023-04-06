@@ -27,7 +27,7 @@ public class DemoApplication {
         return modelAndView;
     }
     
-    @RequestMapping("/old")
+    @RequestMapping("/hello")
     String home() {
       Locale locale;
       DateFormat dateFormat; 
