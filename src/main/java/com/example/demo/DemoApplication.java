@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -19,8 +20,14 @@ public class DemoApplication {
     private static final String HOSTNAME = 
         System.getenv().getOrDefault("HOSTNAME", "unknown");
 
-    
     @RequestMapping("/")
+    public ModelAndView index() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index.html");
+        return modelAndView;
+    }
+    
+    @RequestMapping("/old")
     String home() {
       Locale locale;
       DateFormat dateFormat; 
