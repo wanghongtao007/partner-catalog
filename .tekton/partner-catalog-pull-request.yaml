@@ -11,7 +11,7 @@ metadata:
     pipelinesascode.tekton.dev/on-target-branch: '[main]'
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: partner-catalog-1
+    appstudio.openshift.io/application: partner-catalog
     appstudio.openshift.io/component: partner-catalog
     pipelines.appstudio.openshift.io/type: build
   name: partner-catalog-on-pull-request
@@ -25,7 +25,7 @@ spec:
   - name: image-expires-after
     value: 5d
   - name: output-image
-    value: quay.io/redhat-user-workloads-stage/bsutter-tenant/partner-catalog-1/partner-catalog:on-pr-{{revision}}
+    value: quay.io/redhat-user-workloads-stage/bsutter-tenant/partner-catalog/partner-catalog:on-pr-{{revision}}
   - name: path-context
     value: .
   - name: revision
