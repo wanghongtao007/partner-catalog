@@ -10,7 +10,7 @@ metadata:
     pipelinesascode.tekton.dev/on-target-branch: '[main]'
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: partner-catalog-1
+    appstudio.openshift.io/application: partner-catalog
     appstudio.openshift.io/component: partner-catalog
     pipelines.appstudio.openshift.io/type: build
   name: partner-catalog-on-push
@@ -22,7 +22,7 @@ spec:
   - name: git-url
     value: '{{repo_url}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads-stage/bsutter-tenant/partner-catalog-1/partner-catalog:{{revision}}
+    value: quay.io/redhat-user-workloads-stage/bsutter-tenant/partner-catalog/partner-catalog:{{revision}}
   - name: path-context
     value: .
   - name: revision
